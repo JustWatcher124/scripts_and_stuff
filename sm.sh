@@ -5,8 +5,8 @@ echo $s
 if [ $s = "1" ]
 then
 	#echo 'Hellooo'
-	xrandr --output DP-4 --right-of HDMI-0 --auto
+	xrandr --output DisplayPort-1 --right-of DisplayPort-0 --auto
 else
 	#echo 'not that good'
-	xrandr --output DP-4 --off
+	xrandr --output DisplayPort-1 --off
 fi

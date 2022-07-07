@@ -1,0 +1,9 @@
+#!/bin/bash
+l=liked
+o=offpop
+t=top2020
+i=insomnia
+n=nice
+r=rhythm
+
+mpv --shuffle --pause --volume=25 /home/jw124/mu/liked
