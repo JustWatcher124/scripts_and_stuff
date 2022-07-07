@@ -1,9 +1,49 @@
 #!/bin/bash
-l=liked
-o=offpop
-t=top2020
 i=insomnia
+j=jpop
+l=liked
 n=nice
+o=offpop
 r=rhythm
+s=swiss
+# timeless
+t=top2020
 
-mpv --shuffle --pause --volume=25 /home/jw124/mu/liked
+folder=$(ls /home/jw124/mu)
+echo $folder
+echo "type the first 3 letters to decide the playlist"
+read genre
+case $genre in
+"jpo" | "j" )
+genre=$j
+;;
+"lik" | "l")
+genre=$l
+;;
+"off" | "o")
+genre=$o
+;;
+"top")
+genre=$t
+;;
+"tim" | "t")
+genre=timeless
+;;
+"ins" | "i")
+genre=$i
+;;
+"rhy" | "r")
+genre=$r
+;;
+"nic" | "n")
+genre=$n
+;;
+"swi" | "s")
+genre=$s
+;;
+*)
+echo "repeat"
+;;
+
+esac
+mpv --shuffle --pause --no-video --volume=25 /home/jw124/mu/$genre
